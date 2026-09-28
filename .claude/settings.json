@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python.exe tests/smoke_test.py*)",
+      "Bash(.venv/Scripts/python.exe -m py_compile *)",
+      "Bash(.venv/Scripts/python.exe -m pip list*)",
+      "Bash(.venv/Scripts/python.exe -m pip show *)",
+      "PowerShell(.venv\\Scripts\\python.exe tests\\smoke_test.py*)",
+      "PowerShell(.venv\\Scripts\\python.exe -m py_compile *)",
+      "PowerShell(.venv\\Scripts\\python.exe -m pip list*)",
+      "PowerShell(.venv\\Scripts\\python.exe -m pip show *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Edit(./.env)",
+      "Read(./.env.local)",
+      "Edit(./.env.local)",
+      "Read(./.streamlit/secrets.toml)",
+      "Edit(./.streamlit/secrets.toml)",
+      "Bash(cat .env)",
+      "Bash(cat ./.env)",
+      "Bash(cat .env.local)",
+      "Bash(cat .streamlit/secrets.toml)",
+      "PowerShell(Get-Content .env)",
+      "PowerShell(Get-Content .\\.env)",
+      "PowerShell(type .env)",
+      "PowerShell(cat .env)",
+      "PowerShell(Get-Content .streamlit\\secrets.toml)"
+    ]
+  }
+}
